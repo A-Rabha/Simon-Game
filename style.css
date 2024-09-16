@@ -1,0 +1,168 @@
+/* General Body Styling */
+body {
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #8EC5FC, #E0C3FC); /* Softer, more vibrant gradient */
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: gradientShift 5s ease infinite; /* Subtle background gradient animation */
+}
+
+@keyframes gradientShift {
+    0% {
+        background: linear-gradient(135deg, #8EC5FC, #E0C3FC);
+    }
+    50% {
+        background: linear-gradient(135deg, #FDCB82, #FDAEFD);
+    }
+    100% {
+        background: linear-gradient(135deg, #8EC5FC, #E0C3FC);
+    }
+}
+
+h1, h2 {
+    margin: 0.5rem;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
+    animation: textPop 1s ease forwards; /* Animated pop-in for text */
+}
+
+@keyframes textPop {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 1.8rem;
+    font-weight: normal;
+    animation: bounce 2s ease infinite; /* Slight bounce to make it lively */
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Button Container Styling */
+.btn-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Line Styling */
+.line-one, .line-two {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Button Styling */
+.btn {
+    height: 150px;
+    width: 150px;
+    border-radius: 15%; /* Rounded corners */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2); /* Soft shadow */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Smooth hover transitions */
+    position: relative;
+    animation: pulse 1.5s ease infinite; /* Slow pulsating effect */
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.3);
+    }
+    50% {
+        box-shadow: 0px 0px 40px rgba(255, 255, 255, 0.6);
+    }
+    100% {
+        box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.3);
+    }
+}
+
+.btn:hover {
+    transform: scale(1.1); /* More zoom on hover */
+    box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.3); /* Increased shadow on hover */
+    filter: brightness(1.2); /* Slight brightness increase */
+}
+
+/* Individual Button Colors */
+.red {
+    background-color: #e74c3c;
+}
+
+.yellow {
+    background-color: #f1c40f;
+}
+
+.green {
+    background-color: #2ecc71;
+}
+
+.purple {
+    background-color: #9b59b6;
+}
+
+/* Flashing Effects */
+.gameflash {
+    background-color: #ecf0f1;
+    box-shadow: 0px 0px 40px rgba(255, 255, 255, 0.9); /* Glowing effect during flash */
+    transform: scale(1.2); /* Slight scaling during flash */
+    animation: flashAnimation 0.3s ease;
+}
+
+@keyframes flashAnimation {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+    }
+    50% {
+        transform: scale(1.1);
+        box-shadow: 0 0 40px rgba(255, 255, 255, 0.8);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+    }
+}
+
+.userflash {
+    background-color: #27ae60;
+    box-shadow: 0px 0px 40px rgba(39, 174, 96, 0.9);
+    transform: scale(1.2);
+    animation: flashAnimation 0.3s ease;
+}
+
+/* Add a little more space between the container and the game title */
+h1 {
+    margin-bottom: 1.5rem;
+}
